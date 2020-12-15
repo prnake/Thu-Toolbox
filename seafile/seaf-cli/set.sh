@@ -1,2 +1,2 @@
-export PATH=$PWD/seaf-deamon/bin:$PATH
-export LD_LIBRARY_PATH=$PWD/seaf-deamon/lib:$LD_LIBRARY_PATH
+export PATH=$PWD/seaf-daemon/bin:$PATH
+export LD_LIBRARY_PATH=$PWD/seaf-daemon/lib:$LD_LIBRARY_PATH
