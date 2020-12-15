@@ -1,7 +1,7 @@
 from pysearpc import searpc_func, SearpcError, NamedPipeClient
 
 
-class SeafileRpcClient(NamedPipeClient):
+class RpcClient(NamedPipeClient):
     """RPC used in client"""
 
     def __init__(self, socket_path, *args, **kwargs):
