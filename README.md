@@ -40,7 +40,7 @@ TUNet 2018 认证协议的纯 python 实现，含 auth4 / auth6 / net 认证。�
 
 清华大学 IPv6 配置教程。
 
-## Seaf-cli for THU
+## Seafile for THU
 
-Source from [seaf-cli](https://github.com/haiwen/seafile/blob/master/app/seaf-cli), add THU Auth support.
+Add THU Auth support for Seafile-cli.
 
