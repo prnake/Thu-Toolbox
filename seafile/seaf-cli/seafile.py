@@ -1,17 +1,17 @@
 from pysearpc import searpc_func, SearpcError, NamedPipeClient
 
 
-class SeafileRpcClient(NamedPipeClient):
+class RpcClient(NamedPipeClient):
     """RPC used in client"""
 
     def __init__(self, socket_path, *args, **kwargs):
-         NamedPipeClient.__init__(
-             self,
-             socket_path,
-             "seafile-rpcserver",
-             *args,
-             **kwargs
-         )
+        NamedPipeClient.__init__(
+            self,
+            socket_path,
+            "seafile-rpcserver",
+            *args,
+            **kwargs
+        )
 
     @searpc_func("string", ["int"])
     def seafile_sync_error_id_to_str():
@@ -31,7 +31,7 @@ class SeafileRpcClient(NamedPipeClient):
     @searpc_func("int64", [])
     def seafile_get_total_block_size():
         pass
-    get_total_block_size = seafile_get_total_block_size;
+    get_total_block_size = seafile_get_total_block_size
 
     @searpc_func("string", ["string"])
     def seafile_get_config(key):
@@ -63,7 +63,7 @@ class SeafileRpcClient(NamedPipeClient):
         pass
     set_download_rate_limit = seafile_set_download_rate_limit
 
-    ### repo
+    # repo
     @searpc_func("objlist", ["int", "int"])
     def seafile_get_repo_list():
         pass
@@ -109,7 +109,7 @@ class SeafileRpcClient(NamedPipeClient):
         pass
     branch_add = seafile_branch_add
 
-    ##### clone related
+    # clone related
     @searpc_func("string", ["string", "string"])
     def gen_default_worktree(worktree_parent, repo_name):
         pass
@@ -139,7 +139,7 @@ class SeafileRpcClient(NamedPipeClient):
         pass
     find_transfer_task = seafile_find_transfer_task
 
-    ### sync
+    # sync
     @searpc_func("int", ["string", "string"])
     def seafile_sync(repo_id, peer_id):
         pass
