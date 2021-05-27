@@ -10,6 +10,8 @@
 该方法只修改了官方的`seaf-cli`工具，使其支持直接使用 `Token` 登录。需要安装 `seafile-deamon`，直接安装参考 [Install Seafile Client on Linux](https://help.seafile.com/syncing_client/install_linux_client/)，手动编译参考[Build Seafile Client](https://github.com/ypid/seafile-wiki/blob/master/Build-and-use-seafile-client-from-source.md)。
 然后参考文档使用 `seaf-cli.py` 工具同步。
 
+已向主仓库提交 [patch](https://github.com/haiwen/seafile/pull/2440)，但似乎没人理。
+
 ## 方法二：使用 `python-seafile` API
 
 该方法使用了一个 `Seafile` 官方长期未维护的 Python API，无软件依赖。
